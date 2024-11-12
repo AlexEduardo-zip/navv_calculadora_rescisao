@@ -1,0 +1,140 @@
+:root {
+    --color-primary-1: #c39e81;
+    --color-primary-2: #e2c9b3;
+    --color-primary-3: rgb(48, 44, 42);
+    --color-primary-4: #5e5e5e;
+    --color-primary-5: #6e5949;
+    --color-primary-6: #e9e1d6;
+    --color-primary-7: #c4a267;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.logo {
+    height: 15%;
+    max-height: 95px;
+    margin-top: 5px; /* Margem superior leve */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 100px; /* Compensa o espaço da logo */
+}
+
+.question {
+    margin-bottom: 10px;
+    color: var(--color-primary-3);
+}
+
+.answers button {
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary-1);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.answers button:hover {
+    background-color: var(--color-primary-5);
+}
+
+.result {
+    display: none;
+    font-size: 1.1em;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contactBtn {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary-3);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contactBtn:hover {
+    background-color: var(--color-primary-4);
+}
+
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid var(--color-primary-2);
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary-3);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-primary-4);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

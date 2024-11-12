@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rescisão</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="LOGO_NAVV design.png">
+</head>
+<body>
+    <img src="logoNAVV.png" alt="Logo da Empresa" class="logo">
+    <div class="container">
+        <div id="quiz">
+            <div class="question" id="question1">
+                <div>O QUE ACONTECEU?</div>
+                <div class="answers">
+                    <button onclick="nextQuestion('demitido', 1)">Fui demitido</button>
+                    <button onclick="nextQuestion('demissao', 1)">Pedi demissão</button>
+                </div>
+            </div>
+            <div class="question" id="question2" style="display: none;">
+                <div>VOCÊ FOI DEMITIDO SEM JUSTA CAUSA?</div>
+                <div class="answers">
+                    <button onclick="nextQuestion('yes', 2)">Sim</button>
+                    <button onclick="nextQuestion('no', 2)">Não</button>
+                </div>
+            </div>
+            <div class="question" id="question3" style="display: none;">
+                <div>A EMPRESA ES</div>
+                <div class="answers">
+                    <button onclick="nextQuestion('yes', 3)">Sim</button>
+                    <button onclick="nextQuestion('no', 3)">Não</button>
+                </div>
+            </div>
+        </div>
+        <div id="calculation" class="result">
+            <h2>Calcule sua rescisão</h2>
+            <label for="value1">Salário:</label>
+            <input type="number" id="value1" placeholder="Informe seu salário">
+            <label for="value2">Anos de trabalho:</label>
+            <input type="number" id="value2" placeholder="Informe o tempo em anos">
+            <label for="value3">Meses de trabalho:</label>
+            <input type="number" id="value3" placeholder="Informe o tempo em meses">
+            <label for="value5">Quantas férias você tirou?</label>
+            <input type="number" id="value5" placeholder="Número de férias">
+            <button onclick="calculate()">Realizar a conta</button>
+            <div id="result"></div>
+            <button id="contactBtn" onclick="contactWhatsApp()">Entre em contato pelo WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
